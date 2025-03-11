@@ -10,13 +10,19 @@ import {
   Section7,
 } from "./style";
 
+import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { RiMapPinLine } from "react-icons/ri";
+
 import welcome from "./assets/welcome.jpeg";
 import hubImage from "./assets/hubImage.jpeg";
 import circles from "./assets/circles.webp";
 import diafram from "./assets/diagram.webp";
-import fhhubImage from "./assets/fhhubImage.webp"; // Importe a imagem do fhhub
-import infosImage from "./assets/infosImage.webp"; // Importe a imagem do fhhub
-import newsletterImage from "./assets/newsletterImage.webp"; // Importe a imagem do fhhub
+import fhhubImage from "./assets/fhhubImage.webp";
+import infosImage from "./assets/infosImage.webp";
+import newsletterImage from "./assets/newsletterImage.webp";
+import aboutImage from "./assets/aboutImage.webp";
 
 export default function Home() {
   return (
@@ -36,7 +42,7 @@ export default function Home() {
             </p>
             <h2>Somos uma equipe multidisciplinar.</h2>
             <div className="team">
-              <span>Abrigados</span>
+              <span>Advogados</span>
               <span>Contadores</span>
               <span>Programadores</span>
               <span>Paralegais</span>
@@ -132,10 +138,33 @@ export default function Home() {
           </div>
         </div>
         <div className="newsletter">
-          <div className="newsletter-content"></div>
+          <div className="newsletter-content">
+            <h1>Inscreva-se na Nossa Newsletter</h1>
+            <p>
+              Mantenha-se à frente das mudanças fiscais e descubra insights
+              exclusivos em nossa newsletter. Na FH SOUZA, acreditamos que
+              informação é poder, e queremos compartilhar nosso conhecimento
+              para ajudá-lo a simplificar a gestão fiscal de sua empresa.
+            </p>
+            <p>
+              Ao se inscrever, você receberá atualizações regulares sobre as
+              últimas tendências tributárias, mudanças legislativas e dicas
+              práticas para melhorar suas rotinas fiscais. Combinamos nossa
+              expertise jurídica e tecnológica para oferecer conteúdo relevante
+              que vai facilitar seu dia a dia e ajudar sua empresa a crescer com
+              segurança.
+            </p>
+            <div className="btn-content">
+              <div className="inputs">
+                <input type="text" placeholder="Digite seu Nome" />
+                <input type="email" placeholder="Digite seu E-mail" />
+              </div>
+              <div className="send">Enviar</div>
+            </div>
+          </div>
           <div className="newsletter-image">
             <img
-              src={newsletterImage} // Adicione a imagem do newsletter
+              src={newsletterImage}
               alt="Imagem do Newsletter"
               className="newsletter-image-content"
             />
@@ -143,8 +172,16 @@ export default function Home() {
         </div>
       </Section6>
       <Section7>
-        <div className="infos">
-          <div className="photo"></div>
+        <div className="about">
+          <div className="photo">
+            <div className="circle">
+              <img
+                src={aboutImage} // Adicione a imagem do newsletter
+                alt="Imagem do About"
+                className="about-image-content"
+              />
+            </div>
+          </div>
           <div className="text">
             "Nos meus 30 anos de advocacia tributária, nunca vivemos um ambiente
             tão desafiador como o atual, com excesso de obrigações acessórias
@@ -160,11 +197,20 @@ export default function Home() {
 
         <div className="adresses">
           <div className="social">
-            <div className="whats"></div>
-            <div className="instagram"></div>
-            <div className="linkedin"></div>
+            <div className="whats">
+              <FaWhatsapp />
+            </div>
+            <div className="instagram">
+              <FaInstagram />
+            </div>
+            <div className="linkedin">
+              <FaLinkedin />
+            </div>
           </div>
-          <div className="local"></div>
+          <div className="local">
+            <RiMapPinLine />
+            <p>ONDE ESTAMOS</p>
+          </div>
           <div className="cep">
             Edifício Millenia Office – R. Eulália Silva, 454 – 1º Andar, Sala 12
             – Jardim Faculdade, Sorocaba – SP, 18030-230

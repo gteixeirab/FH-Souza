@@ -315,14 +315,65 @@ export const Section6 = styled.section`
     width: 75%;
     height: 35em;
     display: flex;
-    margin-top: 2em;
+    margin: 2em 0;
 
     .newsletter-content {
-      border: 1px solid white;
-      width: 50%;
-      height: 100%;
+      max-width: 50%;
+      max-height: 100%;
       border-radius: 1.5em;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 2em;
+
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        margin: 1em 0;
+      }
+
+      .btn-content {
+        width: 100%;
+        height: 10em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .inputs {
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+
+          input {
+            width: 43%;
+            height: 2.5em;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            border-radius: 10px;
+            outline: none;
+            padding: 0 1em;
+          }
+        }
+
+        .send {
+          width: 8em;
+          height: 2.5em;
+          background-color: #5b8e3f;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          cursor: pointer;
+          opacity: 0.8;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
     }
 
     .newsletter-image {
@@ -349,20 +400,35 @@ export const Section7 = styled.section`
   justify-content: center;
   align-items: center;
 
-  .infos {
+  .about {
     width: 35%;
     height: 60%;
-    background-color: lightgray;
+    background-color: rgba(0, 0, 0, 0.05);
     border-radius: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .photo {
-      border: 1px solid black;
-
       min-width: 10em;
       height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .circle {
+        border: 1px solid black;
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+        overflow: hidden; /* Garante que a imagem não ultrapasse o círculo */
+
+        .about-image-content {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Faz a imagem cobrir o círculo sem distorcer */
+        }
+      }
     }
 
     .text {
@@ -371,11 +437,14 @@ export const Section7 = styled.section`
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 2em;
+      padding: 1em;
+      opacity: 0.7;
+      line-height: 1.5em;
     }
   }
 
   .adresses {
+    opacity: 0.7;
     width: 35%;
     height: 60%;
     display: flex;
@@ -395,7 +464,15 @@ export const Section7 = styled.section`
         width: 3em;
         height: 3em;
         border-radius: 5px;
-        background-color: darkgray;
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          font-size: 1.7em;
+        }
       }
     }
 
@@ -404,6 +481,15 @@ export const Section7 = styled.section`
       height: 2em;
       border: 1px solid black;
       border-radius: 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3em;
+
+      p {
+        font-size: 0.8em;
+        font-weight: 700;
+      }
     }
 
     .cep {

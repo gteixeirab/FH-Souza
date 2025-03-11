@@ -7,7 +7,6 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: fixed;
-  border-bottom: 1px solid #5b8e3f;
   background-color: white;
   color: black;
   z-index: 1000;
@@ -19,7 +18,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 90em;
+  width: auto;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -58,7 +57,7 @@ export const Menu = styled.div`
   display: flex;
   align-items: center;
   margin-left: 30em;
-  gap: 3em;
+  gap: 2em;
 
   @media (max-width: 1024px) {
     margin-left: 15em;
@@ -75,7 +74,7 @@ export const Menu = styled.div`
     display: flex;
     align-items: center;
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.8;
     border-bottom: rgba(255, 255, 255, 0) 1px solid;
 
     &:hover {
@@ -84,8 +83,8 @@ export const Menu = styled.div`
     }
 
     p {
-      font-size: 1.3em;
-      font-weight: 400;
+      font-size: 1.1em;
+      font-weight: 500;
 
       @media (max-width: 1024px) {
         font-size: 1.1em;

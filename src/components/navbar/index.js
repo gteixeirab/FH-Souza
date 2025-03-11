@@ -39,19 +39,19 @@ export default function Navbar() {
         </Logo>
         <Menu>
           <div className="menu-item">
-            <p>Sobre nós</p>
+            <p>HOME</p>
           </div>
           <div className="menu-item">
-            <p>FH Hub</p>
+            <p>NOTÍCIAS E PUBLICAÇÕES</p>
           </div>
           <div className="menu-item">
-            <p>Nosso escritório</p>
+            <p>NOSSOS SERVIÇOS</p>
           </div>
           <div className="menu-item">
-            <p>FH Atualiza</p>
+            <p>QUEM SOMOS</p>
           </div>
           <div className="menu-item">
-            <p>Contato</p>
+            <p>ENTRE EM CONTATO</p>
           </div>
         </Menu>
         <HamburgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)}>
