@@ -10,6 +10,12 @@ import {
   Section7,
 } from "./style";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -28,6 +34,12 @@ import fhhubImage from "./assets/fhhubImage.webp";
 import infosImage from "./assets/infosImage.webp";
 import newsletterImage from "./assets/newsletterImage.webp";
 import aboutImage from "./assets/aboutImage.webp";
+
+import atualizacoes from "./assets/news/atualizacoes.webp";
+import contribuintes from "./assets/news/contribuintes.webp";
+import exclusao from "./assets/news/exclusao.webp";
+import inclusao from "./assets/news/inclusao.webp";
+import resolucao from "./assets/news/resolucao.webp";
 
 export default function Home() {
   return (
@@ -70,7 +82,45 @@ export default function Home() {
             <div className="icon">FH</div>
           </div>
         </div>
-        <div className="carousel"></div>
+        <div className="carousel">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]} // Adicione Autoplay
+            spaceBetween={30}
+            slidesPerView={2}
+            navigation
+            pagination={{ clickable: true }}
+            loop={true}
+            autoplay={{
+              delay: 3000, // Intervalo de 3 segundos entre os slides
+              disableOnInteraction: false, // Continua o autoplay após interação do usuário
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+            }}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src={atualizacoes} alt="Atualizações" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={contribuintes} alt="Contribuintes" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={exclusao} alt="Exclusão" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={inclusao} alt="Inclusão" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={resolucao} alt="Resolução" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </Section3>
       <Section4>
         <div className="text">
@@ -94,29 +144,29 @@ export default function Home() {
           <p>Conheça Nossos Serviços</p>
         </div>
         <div className="services">
-          <div className="solucoes">
-            <div className="description">
-              <p>Soluções Fiscais</p>
-            </div>
-            <FaRegFileAlt /> {/* Ícone */}
-          </div>
           <div className="administrativos">
+            <GoGraph />
             <div className="description">
               <p>Administrativos</p>
             </div>
-            <GoGraph /> {/* Ícone */}
           </div>
           <div className="acoes">
+            <MdGavel />
             <div className="description">
               <p>Ações Judiciais</p>
             </div>
-            <MdGavel /> {/* Ícone */}
+          </div>
+          <div className="solucoes">
+            <FaRegFileAlt />
+            <div className="description">
+              <p>Soluções Fiscais</p>
+            </div>
           </div>
           <div className="consultoria">
+            <FaBalanceScale />
             <div className="description">
               <p>Consultoria</p>
             </div>
-            <FaBalanceScale /> {/* Ícone */}
           </div>
         </div>
       </Section5>

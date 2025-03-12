@@ -140,9 +140,31 @@ export const Section3 = styled.section`
   }
 
   .carousel {
-    border: 1px solid black;
     width: 80%;
     height: 25em;
+
+    .swiper {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 40em;
+        height: 20em;
+        object-fit: cover; /* Garante que a imagem cubra o slide */
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #5b8e3f; /* Cor dos botões de navegação */
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #5b8e3f; /* Cor dos pontos de paginação */
+    }
   }
 `;
 
@@ -213,7 +235,6 @@ export const Section5 = styled.section`
   }
 
   .services {
-    border: 1px solid black;
     width: 65%;
     height: 15em;
     display: flex;
@@ -224,24 +245,29 @@ export const Section5 = styled.section`
     padding: 0 1em; /* Espaçamento interno */
 
     div {
-      border: 1px solid black;
-      width: 10em; /* Largura mínima de cada item */
+      width: 16em; /* Largura mínima de cada item */
       height: 8em; /* Altura fixa para os itens */
       display: flex;
       flex-direction: column; /* Alinha os itens verticalmente */
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      flex-shrink: 0; /* Impede que os itens encolham */
       gap: 0.5em; /* Espaçamento entre a descrição e o ícone */
+      opacity: 0.8;
 
       .description {
-        font-size: 1em; /* Tamanho da fonte da descrição */
-        text-align: center; /* Centraliza o texto */
+        width: 100%;
+        height: auto;
+
+        p {
+          font-size: 2em; /* Tamanho da fonte da descrição */
+          text-align: center; /* Centraliza o texto */
+        }
       }
 
       svg {
-        font-size: 2em; /* Tamanho do ícone */
+        font-size: 4em; /* Tamanho do ícone */
         color: black;
+        opacity: 0.7;
       }
     }
   }
