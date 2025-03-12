@@ -15,6 +15,11 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { RiMapPinLine } from "react-icons/ri";
 
+import { FaBalanceScale } from "react-icons/fa";
+import { GoGraph } from "react-icons/go";
+import { MdGavel } from "react-icons/md";
+import { FaRegFileAlt } from "react-icons/fa";
+
 import welcome from "./assets/welcome.jpeg";
 import hubImage from "./assets/hubImage.jpeg";
 import circles from "./assets/circles.webp";
@@ -84,7 +89,37 @@ export default function Home() {
           </div>
         </div>
       </Section4>
-      <Section5></Section5>
+      <Section5>
+        <div className="title">
+          <p>Conheça Nossos Serviços</p>
+        </div>
+        <div className="services">
+          <div className="solucoes">
+            <div className="description">
+              <p>Soluções Fiscais</p>
+            </div>
+            <FaRegFileAlt /> {/* Ícone */}
+          </div>
+          <div className="administrativos">
+            <div className="description">
+              <p>Administrativos</p>
+            </div>
+            <GoGraph /> {/* Ícone */}
+          </div>
+          <div className="acoes">
+            <div className="description">
+              <p>Ações Judiciais</p>
+            </div>
+            <MdGavel /> {/* Ícone */}
+          </div>
+          <div className="consultoria">
+            <div className="description">
+              <p>Consultoria</p>
+            </div>
+            <FaBalanceScale /> {/* Ícone */}
+          </div>
+        </div>
+      </Section5>
       <Section6>
         <div className="fhhub">
           <div className="diagram">

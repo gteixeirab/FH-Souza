@@ -197,7 +197,54 @@ export const Section4 = styled.section`
 
 export const Section5 = styled.section`
   width: 100%;
-  height: 25em;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0;
+  gap: 2em;
+
+  .title {
+    width: auto;
+    height: auto;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+
+  .services {
+    border: 1px solid black;
+    width: 65%;
+    height: 15em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto; /* Adiciona a barra de rolagem horizontal */
+    gap: 1em; /* Espaçamento entre os itens */
+    padding: 0 1em; /* Espaçamento interno */
+
+    div {
+      border: 1px solid black;
+      width: 10em; /* Largura mínima de cada item */
+      height: 8em; /* Altura fixa para os itens */
+      display: flex;
+      flex-direction: column; /* Alinha os itens verticalmente */
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0; /* Impede que os itens encolham */
+      gap: 0.5em; /* Espaçamento entre a descrição e o ícone */
+
+      .description {
+        font-size: 1em; /* Tamanho da fonte da descrição */
+        text-align: center; /* Centraliza o texto */
+      }
+
+      svg {
+        font-size: 2em; /* Tamanho do ícone */
+        color: black;
+      }
+    }
+  }
 `;
 
 export const Section6 = styled.section`
