@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="menu-item">
             <p>QUEM SOMOS</p>
           </div>
-          <div className="menu-item">
+          <div className="menu-item contact">
             <p>ENTRE EM CONTATO</p>
           </div>
         </Menu>

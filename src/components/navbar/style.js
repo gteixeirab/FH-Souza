@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 6em;
+  height: 7em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   transition: height 0.3s ease;
 
   @media (max-width: 768px) {
-    height: 4em;
+    height: 5em;
   }
 `;
 
@@ -83,12 +83,25 @@ export const Menu = styled.div`
     }
 
     p {
-      font-size: 1.1em;
+      font-size: 1em;
       font-weight: 500;
 
       @media (max-width: 1024px) {
         font-size: 1.1em;
       }
+    }
+  }
+
+  .contact {
+    background-color: #334155;
+    padding: 0 1em;
+    color: white;
+    border-radius: 5px;
+    margin-left: 4em;
+
+    p {
+      font-size: 0.8em;
+      font-weight: 600;
     }
   }
 `;

@@ -160,6 +160,7 @@ export const Section3 = styled.section`
     .swiper-button-next,
     .swiper-button-prev {
       color: #5b8e3f; /* Cor dos botões de navegação */
+      display: none;
     }
 
     .swiper-pagination-bullet {
@@ -177,6 +178,7 @@ export const Section4 = styled.section`
   align-items: center; /* Centraliza verticalmente */
   color: white;
   padding: 0 5em; /* Adiciona um pouco de espaçamento nas laterais */
+  gap: 6em;
 
   .text {
     width: 20em; /* Largura fixa para o texto */
@@ -184,6 +186,7 @@ export const Section4 = styled.section`
     font-weight: 300;
     line-height: 1.5;
     text-align: left; /* Alinha o texto à esquerda */
+    opacity: 0.8;
   }
 
   .circles {
@@ -194,7 +197,7 @@ export const Section4 = styled.section`
     .circle {
       width: 10em;
       height: 10em;
-      border: 2px solid #5b8e3f;
+      border: 2px solid rgb(108, 200, 60);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -202,7 +205,7 @@ export const Section4 = styled.section`
       text-align: center;
       font-size: 1.2em;
       font-weight: 900;
-      color: #5b8e3f;
+      color: rgb(108, 200, 60);
       transition: background-color 0.3s ease;
       margin-left: -1.5em; /* Sobreposição dos círculos */
 
@@ -283,6 +286,7 @@ export const Section6 = styled.section`
   align-items: center;
   color: white;
   padding: 2em 0;
+  gap: 6em;
 
   .fhhub {
     width: 75%;
@@ -306,6 +310,7 @@ export const Section6 = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 0.8;
       }
 
       .image-container {
@@ -326,7 +331,7 @@ export const Section6 = styled.section`
 
     .fhhub-image {
       width: 50%;
-      height: 100%;
+      height: 25em;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -343,17 +348,19 @@ export const Section6 = styled.section`
 
   .infos {
     width: 75%;
-    height: 25em;
+    height: auto;
     display: flex;
+    justify-content: space-between;
     margin-top: 2em;
 
     .text {
-      width: 50%;
+      width: 45%;
       height: 100%;
       display: flex;
       flex-direction: column;
       gap: 1em;
       padding-right: 3em; /* Recuo para a esquerda */
+      opacity: 0.8;
 
       h1 {
         font-size: 2em;
@@ -361,15 +368,17 @@ export const Section6 = styled.section`
       }
 
       p {
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: 300;
         line-height: 1em;
+
+        line-height: 1.4em;
       }
     }
 
     .infos-image {
-      min-width: 50%;
-      height: 100%;
+      width: 50%;
+      height: 25em;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -399,11 +408,13 @@ export const Section6 = styled.section`
 
       h1 {
         font-size: 2em;
+        opacity: 0.8;
       }
       p {
         font-size: 1.2em;
         line-height: 1.5em;
         margin: 1em 0;
+        opacity: 0.8;
       }
 
       .btn-content {
@@ -517,7 +528,7 @@ export const Section7 = styled.section`
   }
 
   .adresses {
-    opacity: 0.7;
+  
     width: 35%;
     height: 60%;
     display: flex;
@@ -542,6 +553,12 @@ export const Section7 = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 0.7;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
 
         svg {
           font-size: 1.7em;
@@ -558,6 +575,8 @@ export const Section7 = styled.section`
       justify-content: center;
       align-items: center;
       gap: 0.3em;
+      opacity: 0.8;
+      cursor: pointer;
 
       p {
         font-size: 0.8em;
@@ -571,6 +590,7 @@ export const Section7 = styled.section`
       justify-content: center;
       align-items: center;
       text-align: center;
+      opacity: 0.8;
     }
   }
 `;
