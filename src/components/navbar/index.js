@@ -10,9 +10,13 @@ import {
 import { FaBars } from "react-icons/fa"; // Ícone de hambúrguer
 import logo from "./assets/logo.webp"; // Importe a imagem do logo
 
+import { useTabs } from "../../hooks/tabs";
+
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar o menu móvel
+
+  const { setActiveTab } = useTabs();
 
   const handleScroll = () => {
     // Mostra a navbar apenas se o scroll estiver no topo
@@ -38,16 +42,16 @@ export default function Navbar() {
           <img src={logo} alt="FH Souza Advogados" className="logo-image" />
         </Logo>
         <Menu>
-          <div className="menu-item">
+          <div className="menu-item" onClick={() => setActiveTab("home")}>
             <p>HOME</p>
           </div>
-          <div className="menu-item">
+          <div className="menu-item" onClick={() => setActiveTab("news")}>
             <p>NOTÍCIAS E PUBLICAÇÕES</p>
           </div>
-          <div className="menu-item">
+          <div className="menu-item" onClick={() => setActiveTab("services")}>
             <p>NOSSOS SERVIÇOS</p>
           </div>
-          <div className="menu-item">
+          <div className="menu-item" onClick={() => setActiveTab("about")}>
             <p>QUEM SOMOS</p>
           </div>
           <div className="menu-item contact">

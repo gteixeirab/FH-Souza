@@ -197,7 +197,7 @@ export const Section4 = styled.section`
     .circle {
       width: 10em;
       height: 10em;
-      border: 2px solid rgb(108, 200, 60);
+      border: 2px solid #79ad59;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -205,7 +205,7 @@ export const Section4 = styled.section`
       text-align: center;
       font-size: 1.2em;
       font-weight: 900;
-      color: rgb(108, 200, 60);
+      color: #79ad59;
       transition: background-color 0.3s ease;
       margin-left: -1.5em; /* Sobreposição dos círculos */
 
@@ -397,24 +397,25 @@ export const Section6 = styled.section`
     width: 75%;
     height: 35em;
     display: flex;
-    margin: 2em 0;
+    margin: 2em 0 8em 0;
 
     .newsletter-content {
       max-width: 50%;
-      max-height: 100%;
+      height: 100%;
       border-radius: 1.5em;
       background-color: rgba(0, 0, 0, 0.3);
-      padding: 2em;
+      padding: 2em 3em;
 
       h1 {
         font-size: 2em;
         opacity: 0.8;
       }
       p {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        font-weight: 400;
         line-height: 1.5em;
-        margin: 1em 0;
-        opacity: 0.8;
+        margin: 2em 0;
+        opacity: 0.6;
       }
 
       .btn-content {
