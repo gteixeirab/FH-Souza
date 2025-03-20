@@ -149,6 +149,35 @@ export const MobileMenu = styled.div`
     p {
       font-size: 1.2em;
       font-weight: 400;
+      color: white;
     }
+  }
+`;
+
+// Estilo do botão flutuante
+export const FloatingButton = styled.div`
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color:rgb(36, 50, 70);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #555;
+    transform: scale(1.1);
+  }
+
+  svg {
+    font-size: 1.3em;
   }
 `;

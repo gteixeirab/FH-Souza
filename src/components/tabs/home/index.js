@@ -42,6 +42,11 @@ import inclusao from "./assets/news/inclusao.webp";
 import resolucao from "./assets/news/resolucao.webp";
 
 export default function Home() {
+  const whats =
+    "https://api.whatsapp.com/send/?phone=5515981198493&text&type=phone_number&app_absent=0";
+  const instagram = "https://www.instagram.com/fhsouzaconsultoria/";
+  const linkedin = "https://www.linkedin.com/company/fh-souza-advogados/";
+
   return (
     <Container>
       <Section1 background={welcome}>{/* Conteúdo da Section1 */}</Section1>
@@ -282,13 +287,19 @@ export default function Home() {
 
         <div className="adresses">
           <div className="social">
-            <div className="whats">
+            <div className="whats" onClick={() => window.open(whats, "_blank")}>
               <FaWhatsapp />
             </div>
-            <div className="instagram">
+            <div
+              className="instagram"
+              onClick={() => window.open(instagram, "_blank")}
+            >
               <FaInstagram />
             </div>
-            <div className="linkedin">
+            <div
+              className="linkedin"
+              onClick={() => window.open(linkedin, "_blank")}
+            >
               <FaLinkedin />
             </div>
           </div>

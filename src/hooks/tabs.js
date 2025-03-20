@@ -4,6 +4,7 @@ import Home from "../components/tabs/home";
 import News from "../components/tabs/news";
 import Services from "../components/tabs/services";
 import Who from "../components/tabs/who";
+import Contact from "../components/tabs/contact";
 
 const TabsContext = createContext();
 
@@ -14,6 +15,7 @@ export default function TabsProvider({ children }) {
     { tipo: "news", comp: <News /> },
     { tipo: "services", comp: <Services /> },
     { tipo: "who", comp: <Who /> },
+    { tipo: "contact", comp: <Contact /> },
   ];
   return (
     <TabsContext.Provider value={{ stages, activeTab, setActiveTab }}>
