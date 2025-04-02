@@ -71,7 +71,7 @@ export default function Navbar() {
           </div>
           <div
             className="menu-item contact"
-            onClick={() => setActiveTab("contact")}
+            
           >
             <p>ENTRE EM CONTATO</p>
           </div>
@@ -81,16 +81,16 @@ export default function Navbar() {
         </HamburgerMenu>
       </Content>
       <MobileMenu isOpen={isMenuOpen}>
-        <div className="menu-item">
+        <div className="menu-item" onClick={() => setActiveTab("home")}>
           <p>HOME</p>
         </div>
-        <div className="menu-item">
+        <div className="menu-item" onClick={() => setActiveTab("news")}>
           <p>NOTÍCIAS E PUBLICAÇÕES</p>
         </div>
-        <div className="menu-item">
+        <div className="menu-item" onClick={() => setActiveTab("services")}>
           <p>NOSSOS SERVIÇOS</p>
         </div>
-        <div className="menu-item">
+        <div className="menu-item" onClick={() => setActiveTab("who")}>
           <p>QUEM SOMOS</p>
         </div>
         <div className="menu-item">

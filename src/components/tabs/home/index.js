@@ -16,19 +16,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { RiMapPinLine } from "react-icons/ri";
-
-import { FaBalanceScale } from "react-icons/fa";
 import { GoGraph } from "react-icons/go";
 import { MdGavel } from "react-icons/md";
-import { FaRegFileAlt } from "react-icons/fa";
+import { FaRegFileAlt, FaBalanceScale } from "react-icons/fa";
 
 import welcome from "./assets/welcome.jpeg";
 import hubImage from "./assets/hubImage.jpeg";
-import circles from "./assets/circles.webp";
 import diafram from "./assets/diagram.webp";
 import fhhubImage from "./assets/fhhubImage.webp";
 import infosImage from "./assets/infosImage.webp";
@@ -89,15 +84,15 @@ export default function Home() {
         </div>
         <div className="carousel">
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]} // Adicione Autoplay
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
             slidesPerView={2}
             navigation
             pagination={{ clickable: true }}
             loop={true}
             autoplay={{
-              delay: 3000, // Intervalo de 3 segundos entre os slides
-              disableOnInteraction: false, // Continua o autoplay após interação do usuário
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             breakpoints={{
               640: {
@@ -266,7 +261,7 @@ export default function Home() {
           <div className="photo">
             <div className="circle">
               <img
-                src={aboutImage} // Adicione a imagem do newsletter
+                src={aboutImage}
                 alt="Imagem do About"
                 className="about-image-content"
               />

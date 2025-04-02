@@ -41,12 +41,12 @@ export const Logo = styled.div`
   cursor: pointer;
 
   .logo-image {
-    height: 4em; /* Aumente a altura conforme necessário */
-    width: auto; /* Mantém a proporção da imagem */
-    object-fit: contain; /* Garante que a imagem não seja distorcida */
+    height: 4em;
+    width: auto;
+    object-fit: contain;
 
     @media (max-width: 768px) {
-      height: 3em; /* Ajuste para dispositivos móveis */
+      height: 3em;
     }
   }
 `;
@@ -57,15 +57,24 @@ export const Menu = styled.div`
   display: flex;
   align-items: center;
   margin-left: 30em;
-  gap: 2em;
+  gap: 1.5em;
+
+  @media (max-width: 1440px) {
+    margin-left: 20em;
+  }
+
+  @media (max-width: 1200px) {
+    margin-left: 15em;
+    gap: 1.2em;
+  }
 
   @media (max-width: 1024px) {
-    margin-left: 15em;
-    gap: 2em;
+    margin-left: 10em;
+    gap: 1em;
   }
 
   @media (max-width: 768px) {
-    display: none; /* Oculta o menu tradicional em dispositivos móveis */
+    display: none;
   }
 
   .menu-item {
@@ -76,6 +85,7 @@ export const Menu = styled.div`
     cursor: pointer;
     opacity: 0.8;
     border-bottom: rgba(255, 255, 255, 0) 1px solid;
+    white-space: nowrap; /* Prevents text wrapping */
 
     &:hover {
       opacity: 1;
@@ -83,11 +93,20 @@ export const Menu = styled.div`
     }
 
     p {
-      font-size: 1em;
+      font-size: 0.9em;
       font-weight: 500;
+      white-space: nowrap; /* Ensures text stays on one line */
+
+      @media (max-width: 1440px) {
+        font-size: 0.85em;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 0.8em;
+      }
 
       @media (max-width: 1024px) {
-        font-size: 1.1em;
+        font-size: 0.75em;
       }
     }
   }
@@ -97,11 +116,31 @@ export const Menu = styled.div`
     padding: 0 1em;
     color: white;
     border-radius: 5px;
-    margin-left: 4em;
+    margin-left: 3em;
+    white-space: nowrap; /* Prevents text wrapping */
+
+    @media (max-width: 1200px) {
+      margin-left: 2em;
+      padding: 0 0.8em;
+    }
+
+    @media (max-width: 1024px) {
+      margin-left: 1em;
+      padding: 0 0.6em;
+    }
 
     p {
       font-size: 0.8em;
       font-weight: 600;
+      white-space: nowrap; /* Ensures text stays on one line */
+
+      @media (max-width: 1200px) {
+        font-size: 0.75em;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 0.7em;
+      }
     }
   }
 `;
@@ -140,6 +179,7 @@ export const MobileMenu = styled.div`
     cursor: pointer;
     opacity: 0.9;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap; /* Prevents text wrapping */
 
     &:hover {
       opacity: 1;
@@ -147,19 +187,23 @@ export const MobileMenu = styled.div`
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1em;
       font-weight: 400;
       color: white;
+      white-space: nowrap; /* Ensures text stays on one line */
+
+      @media (max-width: 480px) {
+        font-size: 0.9em;
+      }
     }
   }
 `;
 
-// Estilo do botão flutuante
 export const FloatingButton = styled.div`
   width: 3em;
   height: 3em;
   border-radius: 50%;
-  background-color:rgb(36, 50, 70);
+  background-color: rgb(36, 50, 70);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -179,5 +223,12 @@ export const FloatingButton = styled.div`
 
   svg {
     font-size: 1.3em;
+  }
+
+  @media (max-width: 768px) {
+    width: 2.5em;
+    height: 2.5em;
+    right: 1em;
+    bottom: 1em;
   }
 `;
